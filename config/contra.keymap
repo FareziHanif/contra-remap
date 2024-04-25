@@ -18,28 +18,37 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp Q     &kp W     &kp E     &kp R             &kp T      &kp Y   &kp U         &kp I      &kp O      &kp P     &kp BSPC
-&kp TAB    &kp A     &kp S     &kp D     &mt LEFT_SHIFT F  &kp G      &kp H   &kp J         &kp K      &kp L      &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z     &kp X     &kp C     &kp V             &kp B      &kp N   &kp M         &kp COMMA  &kp DOT    &kp FSLH  &kp ENTER
-&kp LCTRL  &kp LGUI  &kp LALT  &kp BSLH  &to DEFAULT       &kp SPACE  &trans  &to NUM_MODS  &kp LEFT   &kp RIGHT  &kp UP    &kp DOWN
+&soft_off     &kp Q                 &kp W                 &kp E        &kp R             &kp T    &kp Y      &kp U              &kp I             &kp O            &kp P            &kp NON_US_BACKSLASH
+&kp GRAVE     &mt LEFT_ALT A        &mt LCTRL S           &mt LCTRL D  &mt LEFT_SHIFT F  &kp G    &kp H      &mt RIGHT_SHIFT J  &mt RCTRL K       &mt RIGHT_ALT L  &kp SEMI         &kp SQT
+&kp DEL       &kp Z                 &kp X                 &kp C        &kp V             &kp B    &kp N      &kp M              &kp COMMA         &kp DOT          &kp FSLH         &kp DELETE
+&kp LEFT_GUI  &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &kp ESCAPE   &lt 1 SPACE       &kp TAB  &kp ENTER  &lt 3 BACKSPACE    &kp K_PLAY_PAUSE  &kp C_VOL_DN     &kp C_VOLUME_UP  &kp RIGHT_GUI
             >;
         };
 
         num_mods {
             bindings = <
-&kp GRAVE  &kp N1    &kp N2    &kp N3      &kp N4       &kp N5     &kp N6   &kp N7       &kp N8     &kp N9     &kp N0    &kp DEL
-&kp TAB    &kp F1    &kp F2    &kp F3      &kp F4       &kp F5     &kp F6   &kp MINUS    &kp PG_UP  &kp LBKT   &kp RBKT  &kp BSLH
-&kp LSHFT  &kp F7    &kp F8    &kp F9      &kp F10      &kp F11    &kp F12  &kp EQUAL    &kp PG_DN  &kp HOME   &kp END   &kp ENTER
-&kp LCTRL  &kp LGUI  &kp LALT  &sys_reset  &to DEFAULT  &kp SPACE  &trans   &mo BT_CTRL  &kp LEFT   &kp RIGHT  &kp UP    &kp DOWN
+&trans  &kp EXCLAMATION  &kp AT_SIGN      &kp HASH        &kp DOLLAR    &kp PERCENT  &kp CARET     &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3    &kp NUMBER_4  &kp N5       &kp NUMBER_6  &kp N7            &kp N8             &kp N9                &kp N0                 &trans
+&trans  &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp UNDERSCORE  &kp EQUAL     &kp PLUS     &kp MINUS     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH  &kp PIPE               &trans
+&trans  &trans           &trans           &trans          &lt 2 SPACE   &trans       &trans        &trans            &trans             &trans                &trans                 &trans
             >;
         };
 
         bt_control {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans      &trans      &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans      &trans      &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans      &trans      &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans  &trans  &bt BT_PRV  &bt BT_NXT  &trans  &trans
+&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &sys_reset
+&bt BT_PRV      &bt BT_NXT    &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &bootloader
+            >;
+        };
+
+        Navigation {
+            bindings = <
+&trans  &trans        &trans     &trans     &trans     &trans  &trans  &kp HOME        &kp UP_ARROW  &kp END    &trans  &trans
+&trans  &kp LEFT_ALT  &kp LCTRL  &kp LCTRL  &kp LSHFT  &trans  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans  &trans
+&trans  &trans        &trans     &trans     &trans     &trans  &trans  &trans          &trans        &trans     &trans  &trans
+&trans  &trans        &trans     &trans     &trans     &trans  &trans  &trans          &trans        &trans     &trans  &trans
             >;
         };
     };
