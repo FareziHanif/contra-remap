@@ -21,7 +21,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <125>;
         };
 
         layertap: layertap {
@@ -30,7 +30,7 @@
             bindings = <&lt>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <125>;
             flavor = "tap-preferred";
         };
     };
