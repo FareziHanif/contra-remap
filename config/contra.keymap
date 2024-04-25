@@ -13,6 +13,28 @@
 #define BT_CTRL  2
 
 / {
+    behaviors {
+        modtap: modtap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MODTAP";
+            bindings = <&mt>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <400>;
+        };
+
+        layertap: layertap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYERTAP";
+            bindings = <&lt>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            flavor = "balanced";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
