@@ -5,33 +5,17 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-
-#define DEFAULT  0
-#define NUM_MODS 1
-#define BT_CTRL  2
 
 / {
     behaviors {
-        modtap: modtap {
+        hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "MODTAP";
-            bindings = <&mt>, <&kp>;
-
             #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            tapping-term-ms = <125>;
-        };
-
-        layertap: layertap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYERTAP";
-            bindings = <&lt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <125>;
-            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
     };
 
