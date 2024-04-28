@@ -17,7 +17,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <50>;
             flavor = "tap-preferred";
         };
     };
@@ -39,7 +39,7 @@
 &trans  &kp EXCLAMATION  &kp AT_SIGN      &kp HASH      &kp DOLLAR    &kp PERCENT  &kp CARET     &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
 &trans  &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4  &kp N5       &kp NUMBER_6  &kp N7            &kp N8             &kp N9                &kp N0                 &trans
 &trans  &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp MINUS     &kp EQUAL     &kp PLUS     &kp UNDER     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH  &kp PIPE               &trans
-&trans  &trans           &trans           &trans        &trans        &trans       &trans        &trans            &trans             &trans                &trans                 &tog 4
+&trans  &trans           &trans           &trans        &trans        &trans       &trans        &trans            &trans             &trans                &trans                 &trans
             >;
         };
 
@@ -54,19 +54,10 @@
 
         mouse {
             bindings = <
-&kp ESCAPE  &trans        &mkp MB4   &mkp MCLK  &mkp MB5        &trans  &trans  &trans  &trans  &trans  &sys_reset   &bt BT_CLR
-&trans      &kp LEFT_ALT  &kp LCTRL  &mkp LCLK  &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans  &trans       &bt BT_CLR_ALL
-&trans      &trans        &kp PG_DN  &mkp RCLK  &kp PG_UP       &trans  &trans  &trans  &trans  &trans  &trans       &bt BT_SEL 2
-&trans      &trans        &trans     &trans     &trans          &trans  &trans  &trans  &trans  &trans  &bootloader  &bt BT_SEL 3
-            >;
-        };
-
-        geming {
-            bindings = <
-&kp ESC       &kp Q   &kp W      &kp E      &kp R      &kp T   &kp Y   &kp U   &kp I      &kp O    &kp P     &tog 4
-&kp TAB       &kp A   &kp S      &kp D      &kp F      &kp G   &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_ALT  &kp Z   &kp X      &kp C      &kp V      &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-&kp LGUI      &trans  &kp LCTRL  &kp LSHFT  &kp SPACE  &trans  &trans  &trans  &trans     &trans   &trans    &tog 4
+&kp ESCAPE  &trans        &mkp MB4   &mkp MCLK  &mkp MB5        &trans   &trans  &trans  &trans  &trans  &sys_reset   &bt BT_CLR
+&kp TAB     &kp LEFT_ALT  &kp LCTRL  &mkp LCLK  &kp LEFT_SHIFT  &kp TAB  &trans  &trans  &trans  &trans  &trans       &bt BT_CLR_ALL
+&trans      &trans        &kp PG_DN  &mkp RCLK  &kp PG_UP       &trans   &trans  &trans  &trans  &trans  &trans       &bt BT_SEL 2
+&trans      &trans        &trans     &trans     &trans          &trans   &trans  &trans  &trans  &trans  &bootloader  &bt BT_SEL 3
             >;
         };
     };
