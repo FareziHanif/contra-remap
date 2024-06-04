@@ -63,9 +63,9 @@
 
         layer_4 {
             bindings = <
-&kp ESCAPE    &kp Q      &kp W      &kp E      &kp R      &kp T   &kp Y   &kp U      &kp I      &kp O    &kp P     &trans
+&kp ESCAPE    &kp Q      &kp W      &kp E      &kp R      &kp T   &kp Y   &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
 &kp TAB       &kp A      &kp S      &kp D      &kp F      &kp G   &kp H   &kp J      &kp K      &kp L    &kp SEMI  &tog 0
-&kp LEFT_ALT  &kp Z      &kp X      &kp C      &kp V      &kp B   &kp N   &kp M      &kp COMMA  &kp DOT  &kp FSLH  &to 4
+&kp LEFT_ALT  &kp Z      &kp X      &kp C      &kp V      &kp B   &kp N   &kp M      &kp COMMA  &kp DOT  &kp FSLH  &tog 4
 &kp LEFT_GUI  &kp PG_DN  &kp PG_UP  &kp LCTRL  &kp SPACE  &trans  &trans  &kp SPACE  &trans     &trans   &trans    &trans
             >;
         };
